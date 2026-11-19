@@ -9,8 +9,8 @@
   --muted:#aaaaaa;
   --line:#282828;
   --font:"Hanken Grotesk",system-ui,-apple-system,sans-serif;
-  --col:84rem;          /* marco de la pagina: cabecera, titulo, pie */
-  --medida:46rem;       /* medida de lectura del cuerpo de texto */
+  --col:100rem;         /* marco de la pagina: cabecera, titulo, pie */
+  --medida:100%;        /* el cuerpo llena el marco */
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -24,19 +24,18 @@ body{
   line-height:1.75;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
-  padding:0 clamp(1.25rem,5vw,6rem);
+  padding:0 clamp(1.25rem,4vw,4.5rem);
 }
 
 .col{width:100%;max-width:var(--col);margin:0 auto}
 
-/* El marco usa el ancho de la pantalla. El cuerpo de texto se topa en
-   --medida para que el renglon no pase de ~80 caracteres, y se alinea a
-   la izquierda: el aire sobrante queda a la derecha, no partido en dos. */
+/* --medida controla el ancho del cuerpo de texto. En 100% llena el marco.
+   Para volver a una medida de lectura corta, ponlo en 46rem. */
 article p,
 article h2,
 article ul,
 article ol{max-width:var(--medida)}
-article .dek{max-width:54rem}   /* la bajada aguanta mas ancho que el cuerpo */
+article .dek{max-width:var(--medida)}
 
 /* Cabecera del sitio */
 .top{

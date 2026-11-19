@@ -9,7 +9,7 @@
   --muted:#aaaaaa;
   --line:#282828;
   --font:"Hanken Grotesk",system-ui,-apple-system,sans-serif;
-  --col:100rem;         /* marco de la pagina: cabecera, titulo, pie */
+  --col:75rem;          /* ancho maximo del contenido: 1200px */
   --medida:100%;        /* el cuerpo llena el marco */
 }
 

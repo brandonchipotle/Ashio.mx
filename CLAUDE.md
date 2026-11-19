@@ -100,7 +100,15 @@ conversacional sin decoración. Regio en actitud, sin modismos.
 - **Densidad visual.** El artículo de ventas por accidente lleva cuatro
   bloques destacados en 790 palabras. No es un patrón repetible por
   simetría: un artículo sin cuatro momentos de esa carga debe llevar
-  menos.
+  menos. "¿Cómo le creyeron?" lleva tres en 2,813 palabras.
+- **Componentes del blog.** Viven en `assets/blog.css` y se reusan entre
+  artículos: `.ciclo` lista de intentos, `.clave` tesis destacada,
+  `.comparacion` dos casos que se confunden, `.ruta` pasos encadenados,
+  `.pilares` tres elementos sobre una base, `.fuentes` referencias al
+  pie. Antes de inventar uno nuevo, revisar si alguno de estos sirve.
+- **Fuentes al pie.** Un artículo con datos verificables cierra con una
+  sección de Fuentes. No se citan dentro del cuerpo para no romper la
+  lectura.
 
 ## Pendientes
 

@@ -21,7 +21,7 @@ body{
   font-family:var(--font);
   font-weight:300;
   font-size:1.1875rem;
-  line-height:1.58;
+  line-height:1.42;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
   padding:0 clamp(1.25rem,4vw,4.5rem);
@@ -92,7 +92,7 @@ h2{
   text-wrap:balance;
 }
 h2 + p{margin-top:.875rem}
-p{margin-top:1.375rem;text-wrap:pretty}
+p{margin-top:1.25rem;text-wrap:pretty}
 
 /* Listas numeradas: estructura visible sin recuadros. */
 ol,ul{margin-top:1.5rem;padding-left:0;list-style:none;counter-reset:paso}

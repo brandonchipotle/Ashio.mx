@@ -95,14 +95,16 @@ h2 + p{margin-top:.875rem}
 p{margin-top:1.25rem;text-wrap:pretty}
 
 /* Listas numeradas: estructura visible sin recuadros. */
-ol,ul{margin-top:1.5rem;padding-left:0;list-style:none;counter-reset:paso}
-ol li{
+article > ol,
+article > ul{margin-top:1.5rem;padding-left:0;list-style:none;counter-reset:paso}
+figure ol,figure ul{padding-left:0;list-style:none}
+article > ol > li{
   position:relative;
   counter-increment:paso;
   padding-left:3rem;
   margin-top:1rem;
 }
-ol li::before{
+article > ol > li::before{
   content:counter(paso);
   position:absolute;
   left:0;
@@ -113,7 +115,7 @@ ol li::before{
   color:var(--accent);
   font-weight:500;
 }
-li strong{font-weight:600}
+article > ol > li strong{font-weight:600}
 
 .cierre{
   margin-top:3rem;
@@ -263,6 +265,7 @@ figure + p{margin-top:2.25rem}
 }
 .ciclo__pasos li{
   display:flex;
+  position:static;
   flex-wrap:wrap;
   align-items:baseline;
   justify-content:space-between;

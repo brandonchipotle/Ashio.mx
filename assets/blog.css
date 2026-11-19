@@ -34,7 +34,8 @@ body{
 article p,
 article h2,
 article ul,
-article ol{max-width:var(--medida)}
+article ol,
+article li{max-width:var(--medida)}
 article .dek{max-width:var(--medida)}
 
 /* Cabecera del sitio */
@@ -92,6 +93,36 @@ h2{
 }
 h2 + p{margin-top:.875rem}
 p{margin-top:1.375rem;text-wrap:pretty}
+
+/* Listas numeradas: estructura visible sin recuadros. */
+ol,ul{margin-top:1.5rem;padding-left:0;list-style:none;counter-reset:paso}
+ol li{
+  position:relative;
+  counter-increment:paso;
+  padding-left:3rem;
+  margin-top:1rem;
+}
+ol li::before{
+  content:counter(paso);
+  position:absolute;
+  left:0;
+  top:.05em;
+  width:1.75rem;
+  text-align:right;
+  font-variant-numeric:tabular-nums;
+  color:var(--accent);
+  font-weight:500;
+}
+li strong{font-weight:600}
+
+.cierre{
+  margin-top:3rem;
+  padding-top:1.75rem;
+  border-top:1px solid var(--line);
+  font-size:1.25rem;
+  font-weight:400;
+  line-height:1.55;
+}
 p strong{font-weight:600}
 a{color:inherit}
 

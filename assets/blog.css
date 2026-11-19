@@ -227,19 +227,21 @@ a{color:inherit}
   color:var(--muted);
 }
 
-@media (min-width:56rem){
-  .ruta__pasos{grid-template-columns:repeat(4,1fr);gap:2.5rem}
+/* Cinco pasos en linea. El corte sube a 64rem porque por debajo de ese
+   ancho las columnas quedan demasiado angostas y el texto se parte mal. */
+@media (min-width:64rem){
+  .ruta__pasos{grid-template-columns:repeat(5,1fr);gap:1.75rem}
   .ruta .paso{padding-left:0;padding-top:3.25rem}
   .ruta .paso::after{
     left:2.25rem;
-    right:-2.5rem;
+    right:-1.75rem;
     top:1.125rem;
     bottom:auto;
     width:auto;
     height:1px;
   }
-  .ruta .paso h3{padding-top:0}
-  .ruta .paso p{max-width:none}
+  .ruta .paso h3{padding-top:0;font-size:1.0625rem}
+  .ruta .paso p{max-width:none;font-size:.9375rem}
 }
 
 @media (prefers-contrast:more){
